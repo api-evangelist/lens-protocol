@@ -17,205 +17,207 @@ position: Provider
 access: Public
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Lens Protocol
-  - Onchain Social
-  - Web3
-  - Social Graph
-  - Polygon
-  - Lens Chain
-  - zkEVM
-  - GraphQL
-  - Smart Contracts
-  - Decentralized Identity
+- Lens Protocol
+- Onchain Social
+- Web3
+- Social Graph
+- Polygon
+- Lens Chain
+- zkEVM
+- GraphQL
+- Smart Contracts
+- Decentralized Identity
 url: https://raw.githubusercontent.com/api-evangelist/lens-protocol/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.20'
 apis:
-  - aid: lens-protocol:lens-api
-    name: Lens API (GraphQL)
-    description: |
-      The Lens API is a hosted GraphQL endpoint that indexes the Lens
-      Chain contracts and exposes queries and mutations for accounts,
-      posts (publications), feeds, follows, groups, apps, notifications,
-      and search. It is the primary read/write surface for most Lens
-      applications and is consumed by the Lens TypeScript SDK and React
-      SDK. Authentication uses Lens-issued bearer tokens obtained via a
-      wallet signature.
-    humanURL: https://lens.xyz/docs/api
-    baseURL: https://api.lens.xyz/graphql
-    tags:
-      - GraphQL
-      - Indexer
-      - Accounts
-      - Posts
-      - Feeds
-      - Follows
-    properties:
-      - type: Documentation
-        url: https://lens.xyz/docs/api
-      - type: GraphQLEndpoint
-        url: https://api.lens.xyz/graphql
-      - type: Explorer
-        url: https://lens.xyz/docs/api/playground
-  - aid: lens-protocol:lens-sdk
-    name: Lens TypeScript SDK
-    description: |
-      The Lens SDK is the official TypeScript client for the Lens API.
-      It wraps GraphQL operations behind typed functions, handles auth
-      token lifecycle, encodes content metadata (Lens metadata standards),
-      and integrates with viem/ethers for contract calls when needed.
-    humanURL: https://lens.xyz/docs/sdk
-    baseURL: https://www.npmjs.com/package/@lens-protocol/client
-    tags:
-      - SDK
-      - TypeScript
-      - Client Library
-    properties:
-      - type: Documentation
-        url: https://lens.xyz/docs/sdk
-      - type: Package
-        url: https://www.npmjs.com/package/@lens-protocol/client
-      - type: Repository
-        url: https://github.com/lens-protocol/lens-sdk
-  - aid: lens-protocol:lens-react-sdk
-    name: Lens React SDK
-    description: |
-      The Lens React SDK provides React hooks (useAccount, usePosts,
-      useFollow, useLogin, etc.) layered on top of the Lens client SDK,
-      so frontend developers can wire Lens primitives into UIs without
-      hand-rolling GraphQL queries or auth flows.
-    humanURL: https://lens.xyz/docs/sdk/react
-    baseURL: https://www.npmjs.com/package/@lens-protocol/react
-    tags:
-      - SDK
-      - React
-      - Hooks
-      - Frontend
-    properties:
-      - type: Documentation
-        url: https://lens.xyz/docs/sdk/react
-      - type: Package
-        url: https://www.npmjs.com/package/@lens-protocol/react
-      - type: Repository
-        url: https://github.com/lens-protocol/lens-sdk
-  - aid: lens-protocol:lens-contracts
-    name: Lens Protocol Smart Contracts
-    description: |
-      The Lens v3 smart contracts implement the onchain social graph on
-      Lens Chain. Core primitives include Accounts (user identity owned
-      by a wallet), Apps (namespaces that publish content), Feeds
-      (ordered collections of posts), Groups (membership sets), Graphs
-      (follow relationships), and Actions (composable behaviors attached
-      to posts or accounts). Applications can interact directly with the
-      contracts when they need behavior beyond the hosted API.
-    humanURL: https://lens.xyz/docs/protocol
-    baseURL: https://explorer.lens.xyz
-    tags:
-      - Smart Contracts
-      - Lens Chain
-      - zkEVM
-      - Solidity
-      - Onchain
-    properties:
-      - type: Documentation
-        url: https://lens.xyz/docs/protocol
-      - type: Repository
-        url: https://github.com/lens-protocol/lens-v3
-      - type: Explorer
-        url: https://explorer.lens.xyz/
-  - aid: lens-protocol:lens-authentication
-    name: Lens Authentication
-    description: |
-      Lens authentication uses a sign-in-with-Ethereum style challenge:
-      a client requests a signing message from the Lens API, the user
-      signs it with their wallet, and the API returns short-lived access
-      and refresh tokens scoped to a specific Account and App. The auth
-      flow supports owner, manager, and onboarding-user roles.
-    humanURL: https://lens.xyz/docs/authentication
-    baseURL: https://api.lens.xyz/graphql
-    tags:
-      - Authentication
-      - SIWE
-      - Wallet
-      - Bearer Token
-    properties:
-      - type: Documentation
-        url: https://lens.xyz/docs/authentication
-  - aid: lens-protocol:lens-storage
-    name: Lens Storage & Metadata
-    description: |
-      Lens content (post body, media, profile metadata) is stored as JSON
-      following the Lens Metadata Standards and pinned to decentralized
-      storage (IPFS, Arweave, or Lens-hosted storage). The metadata
-      standards define text-only posts, articles, images, video, audio,
-      events, marketplace items, and more.
-    humanURL: https://lens.xyz/docs/storage
-    baseURL: https://lens.xyz/docs/storage
-    tags:
-      - Storage
-      - Metadata
-      - IPFS
-      - Arweave
-    properties:
-      - type: Documentation
-        url: https://lens.xyz/docs/storage
-      - type: MetadataStandards
-        url: https://github.com/lens-protocol/metadata
-features:
-  - name: Onchain Social Graph
-    description: Profiles, follows, and posts are settled on Lens Chain, so users own their identity and audience.
-  - name: GraphQL API
-    description: A hosted GraphQL gateway indexes the chain and gives developers a familiar query surface.
-  - name: Typed SDKs
-    description: Official TypeScript and React SDKs cover queries, mutations, auth, and metadata.
-  - name: Composable Primitives
-    description: Apps, Feeds, Groups, Graphs, and Actions can be assembled into many different social products.
-  - name: Wallet-Based Auth
-    description: Sign-in-with-Ethereum challenges issue short-lived tokens scoped to an Account and App.
-  - name: Decentralized Storage
-    description: Content metadata is pinned to IPFS or Arweave with standardized schemas.
-useCases:
-  - name: Social Clients
-    description: Build Twitter-style or long-form social clients on top of the Lens graph (Hey, Orb, Tape, Buttrfly).
-  - name: Creator Tools
-    description: Ship monetization, analytics, and publishing tools that read and write to a user's Lens Account.
-  - name: Composable Mini-Apps
-    description: Use the Apps primitive to publish into shared feeds while keeping a distinct product identity.
-  - name: Onchain Reputation
-    description: Use account history, follows, and group membership as portable reputation across apps.
-  - name: Tokenized Content
-    description: Attach collect modules and Actions to posts for tipping, paywalls, and editions.
-integrations:
-  - name: Lens Chain
-  - name: Polygon
-  - name: viem
-  - name: ethers.js
-  - name: IPFS
-  - name: Arweave
-  - name: ConnectKit
-  - name: RainbowKit
-common:
-  - type: Website
-    url: https://lens.xyz/
+- aid: lens-protocol:lens-api
+  name: Lens API (GraphQL)
+  description: |
+    The Lens API is a hosted GraphQL endpoint that indexes the Lens
+    Chain contracts and exposes queries and mutations for accounts,
+    posts (publications), feeds, follows, groups, apps, notifications,
+    and search. It is the primary read/write surface for most Lens
+    applications and is consumed by the Lens TypeScript SDK and React
+    SDK. Authentication uses Lens-issued bearer tokens obtained via a
+    wallet signature.
+  humanURL: https://lens.xyz/docs/api
+  baseURL: https://api.lens.xyz/graphql
+  tags:
+  - GraphQL
+  - Indexer
+  - Accounts
+  - Posts
+  - Feeds
+  - Follows
+  properties:
   - type: Documentation
-    url: https://lens.xyz/docs
-  - type: API
     url: https://lens.xyz/docs/api
-  - type: SDK
+  - type: GraphQLEndpoint
+    url: https://api.lens.xyz/graphql
+  - type: Explorer
+    url: https://lens.xyz/docs/api/playground
+  - url: graphql/lens-protocol-graphql.md
+    type: GraphQL
+- aid: lens-protocol:lens-sdk
+  name: Lens TypeScript SDK
+  description: |
+    The Lens SDK is the official TypeScript client for the Lens API.
+    It wraps GraphQL operations behind typed functions, handles auth
+    token lifecycle, encodes content metadata (Lens metadata standards),
+    and integrates with viem/ethers for contract calls when needed.
+  humanURL: https://lens.xyz/docs/sdk
+  baseURL: https://www.npmjs.com/package/@lens-protocol/client
+  tags:
+  - SDK
+  - TypeScript
+  - Client Library
+  properties:
+  - type: Documentation
     url: https://lens.xyz/docs/sdk
-  - type: Protocol
+  - type: Package
+    url: https://www.npmjs.com/package/@lens-protocol/client
+  - type: Repository
+    url: https://github.com/lens-protocol/lens-sdk
+- aid: lens-protocol:lens-react-sdk
+  name: Lens React SDK
+  description: |
+    The Lens React SDK provides React hooks (useAccount, usePosts,
+    useFollow, useLogin, etc.) layered on top of the Lens client SDK,
+    so frontend developers can wire Lens primitives into UIs without
+    hand-rolling GraphQL queries or auth flows.
+  humanURL: https://lens.xyz/docs/sdk/react
+  baseURL: https://www.npmjs.com/package/@lens-protocol/react
+  tags:
+  - SDK
+  - React
+  - Hooks
+  - Frontend
+  properties:
+  - type: Documentation
+    url: https://lens.xyz/docs/sdk/react
+  - type: Package
+    url: https://www.npmjs.com/package/@lens-protocol/react
+  - type: Repository
+    url: https://github.com/lens-protocol/lens-sdk
+- aid: lens-protocol:lens-contracts
+  name: Lens Protocol Smart Contracts
+  description: |
+    The Lens v3 smart contracts implement the onchain social graph on
+    Lens Chain. Core primitives include Accounts (user identity owned
+    by a wallet), Apps (namespaces that publish content), Feeds
+    (ordered collections of posts), Groups (membership sets), Graphs
+    (follow relationships), and Actions (composable behaviors attached
+    to posts or accounts). Applications can interact directly with the
+    contracts when they need behavior beyond the hosted API.
+  humanURL: https://lens.xyz/docs/protocol
+  baseURL: https://explorer.lens.xyz
+  tags:
+  - Smart Contracts
+  - Lens Chain
+  - zkEVM
+  - Solidity
+  - Onchain
+  properties:
+  - type: Documentation
     url: https://lens.xyz/docs/protocol
-  - type: GitHubOrganization
-    url: https://github.com/lens-protocol
+  - type: Repository
+    url: https://github.com/lens-protocol/lens-v3
   - type: Explorer
     url: https://explorer.lens.xyz/
-  - type: Blog
-    url: https://lens.xyz/news
-  - type: Twitter
-    url: https://twitter.com/LensProtocol
-  - type: Discord
-    url: https://discord.gg/lensprotocol
+- aid: lens-protocol:lens-authentication
+  name: Lens Authentication
+  description: |
+    Lens authentication uses a sign-in-with-Ethereum style challenge:
+    a client requests a signing message from the Lens API, the user
+    signs it with their wallet, and the API returns short-lived access
+    and refresh tokens scoped to a specific Account and App. The auth
+    flow supports owner, manager, and onboarding-user roles.
+  humanURL: https://lens.xyz/docs/authentication
+  baseURL: https://api.lens.xyz/graphql
+  tags:
+  - Authentication
+  - SIWE
+  - Wallet
+  - Bearer Token
+  properties:
+  - type: Documentation
+    url: https://lens.xyz/docs/authentication
+- aid: lens-protocol:lens-storage
+  name: Lens Storage & Metadata
+  description: |
+    Lens content (post body, media, profile metadata) is stored as JSON
+    following the Lens Metadata Standards and pinned to decentralized
+    storage (IPFS, Arweave, or Lens-hosted storage). The metadata
+    standards define text-only posts, articles, images, video, audio,
+    events, marketplace items, and more.
+  humanURL: https://lens.xyz/docs/storage
+  baseURL: https://lens.xyz/docs/storage
+  tags:
+  - Storage
+  - Metadata
+  - IPFS
+  - Arweave
+  properties:
+  - type: Documentation
+    url: https://lens.xyz/docs/storage
+  - type: MetadataStandards
+    url: https://github.com/lens-protocol/metadata
+features:
+- name: Onchain Social Graph
+  description: Profiles, follows, and posts are settled on Lens Chain, so users own their identity and audience.
+- name: GraphQL API
+  description: A hosted GraphQL gateway indexes the chain and gives developers a familiar query surface.
+- name: Typed SDKs
+  description: Official TypeScript and React SDKs cover queries, mutations, auth, and metadata.
+- name: Composable Primitives
+  description: Apps, Feeds, Groups, Graphs, and Actions can be assembled into many different social products.
+- name: Wallet-Based Auth
+  description: Sign-in-with-Ethereum challenges issue short-lived tokens scoped to an Account and App.
+- name: Decentralized Storage
+  description: Content metadata is pinned to IPFS or Arweave with standardized schemas.
+useCases:
+- name: Social Clients
+  description: Build Twitter-style or long-form social clients on top of the Lens graph (Hey, Orb, Tape, Buttrfly).
+- name: Creator Tools
+  description: Ship monetization, analytics, and publishing tools that read and write to a user's Lens Account.
+- name: Composable Mini-Apps
+  description: Use the Apps primitive to publish into shared feeds while keeping a distinct product identity.
+- name: Onchain Reputation
+  description: Use account history, follows, and group membership as portable reputation across apps.
+- name: Tokenized Content
+  description: Attach collect modules and Actions to posts for tipping, paywalls, and editions.
+integrations:
+- name: Lens Chain
+- name: Polygon
+- name: viem
+- name: ethers.js
+- name: IPFS
+- name: Arweave
+- name: ConnectKit
+- name: RainbowKit
+common:
+- type: Website
+  url: https://lens.xyz/
+- type: Documentation
+  url: https://lens.xyz/docs
+- type: API
+  url: https://lens.xyz/docs/api
+- type: SDK
+  url: https://lens.xyz/docs/sdk
+- type: Protocol
+  url: https://lens.xyz/docs/protocol
+- type: GitHubOrganization
+  url: https://github.com/lens-protocol
+- type: Explorer
+  url: https://explorer.lens.xyz/
+- type: Blog
+  url: https://lens.xyz/news
+- type: Twitter
+  url: https://twitter.com/LensProtocol
+- type: Discord
+  url: https://discord.gg/lensprotocol
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
