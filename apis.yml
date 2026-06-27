@@ -204,7 +204,7 @@ common:
   url: https://lens.xyz/docs
 - type: API
   url: https://lens.xyz/docs/api
-- type: SDK
+- type: SDKs
   url: https://lens.xyz/docs/sdk
 - type: Protocol
   url: https://lens.xyz/docs/protocol
