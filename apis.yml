@@ -198,6 +198,8 @@ integrations:
 - name: ConnectKit
 - name: RainbowKit
 common:
+- type: DomainSecurity
+  url: security/lens-protocol-domain-security.yml
 - type: Website
   url: https://lens.xyz/
 - type: Documentation
