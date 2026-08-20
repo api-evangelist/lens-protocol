@@ -59,6 +59,13 @@ apis:
   tags:
   - GraphQL
   - Indexer
+  - Account
+  - Posts
+  - Feeds
+  - Follows
+  tags_raw:
+  - GraphQL
+  - Indexer
   - Accounts
   - Posts
   - Feeds
@@ -149,6 +156,11 @@ apis:
   humanURL: https://lens.xyz/docs/authentication
   baseURL: https://api.lens.xyz/graphql
   tags:
+  - Authentication
+  - SIWE
+  - Wallets
+  - Bearer Token
+  tags_raw:
   - Authentication
   - SIWE
   - Wallet
