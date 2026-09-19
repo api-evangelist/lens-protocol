@@ -73,7 +73,7 @@ apis:
   - Indexer
   - Account
   - Posts
-  - Feeds
+  - Feed
   - Follows
   tags_raw:
   - GraphQL
