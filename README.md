@@ -1,4 +1,4 @@
-# lens-protocol
+# Lens Protocol
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,4 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Lens Protocol — onchain social graph (Polygon)
+Lens Protocol is an onchain social graph and a developer platform for building social applications where users own their profile, content, and relationships. Originally launched on Polygon PoS, Lens has since evolved into Lens Chain — an L2 zkEVM rollup purpose-built for social — with the Lens v3 contracts redesigned around primitives like Accounts, Apps, Feeds, Groups, Graphs, and Actions. Developers integrate Lens through the Lens API (a GraphQL gateway over the indexed chain state), the Lens TypeScript SDK and React SDK, the underlying smart contracts, and an authentication layer that issues short-lived auth tokens after a SIWE-style signature. Lens powers social clients (Hey, Orb, Tape, Buttrfly), creator tools, and composable mini-apps that share the same onchain social graph.
+
+**Areas:** Lens Protocol · Onchain Social · Web3 · Social Graph · Polygon · Lens Chain · zkEVM · GraphQL · Smart Contracts · Decentralized Identity
+
+## Lens Protocol on APIs.io
+
+Everything profiled for Lens Protocol is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lens-protocol/](https://apis.io/providers/lens-protocol/)** — or go straight to one of the APIs or properties below.
+
+### APIs (6)
+
+- [Lens API (GraphQL)](https://apis.io/apis/lens-protocol/lens-api/) — The Lens API is a hosted GraphQL endpoint that indexes the Lens Chain contracts and exposes queries and mutations for accounts, posts (publications), feeds,…
+- [Lens TypeScript SDK](https://apis.io/apis/lens-protocol/lens-sdk/) — The Lens SDK is the official TypeScript client for the Lens API. It wraps GraphQL operations behind typed functions, handles auth token lifecycle, encodes…
+- [Lens React SDK](https://apis.io/apis/lens-protocol/lens-react-sdk/) — The Lens React SDK provides React hooks (useAccount, usePosts, useFollow, useLogin, etc.) layered on top of the Lens client SDK, so frontend developers can…
+- [Lens Protocol Smart Contracts](https://apis.io/apis/lens-protocol/lens-contracts/) — The Lens v3 smart contracts implement the onchain social graph on Lens Chain. Core primitives include Accounts (user identity owned by a wallet), Apps…
+- [Lens Authentication](https://apis.io/apis/lens-protocol/lens-authentication/) — Lens authentication uses a sign-in-with-Ethereum style challenge: a client requests a signing message from the Lens API, the user signs it with their…
+- [Lens Storage & Metadata](https://apis.io/apis/lens-protocol/lens-storage/) — Lens content (post body, media, profile metadata) is stored as JSON following the Lens Metadata Standards and pinned to decentralized storage (IPFS,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### GraphQL (1)
+
+GraphQL schemas.
+
+- [Lens Protocol GraphQL API](https://apis.io/graphqls/lens-protocol/lens-protocol-graphql/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lens Protocol Domain Security](https://apis.io/security/lens-protocol/lens-protocol-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Lens Protocol Plans Pricing](https://apis.io/plans/lens-protocol/lens-protocol-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Lens Protocol Rate Limits](https://apis.io/rate-limits/lens-protocol/lens-protocol-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Lens Protocol Finops](https://apis.io/finops/lens-protocol/lens-protocol-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://lens.xyz/)
+- [Documentation](https://lens.xyz/docs)
+- [Blog](https://lens.xyz/news)
+- [GitHub](https://github.com/lens-protocol)
+
+## API Evangelist rating
+
+**Kin Score 12.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 5.3 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lens-protocol/](https://apis.io/providers/lens-protocol/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lens Protocol: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lens-protocol/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
